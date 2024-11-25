@@ -1,0 +1,84 @@
+/* Общий стиль для навбара */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(81, 81, 81); /* Яркий красный для фастфуда */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-link {
+  color: white;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.logo-link:hover {
+  color: #ffe6e6; /* Светло-розовый при наведении */
+}
+
+/* Ссылки */
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: white;
+  color: rgb(77, 77, 77); /* Красный текст при наведении */
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Скрыть ссылки по умолчанию */
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(69, 69, 69);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex; /* Показать меню при активном состоянии */
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+/* Для десктопов */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* Скрыть кнопку меню на больших экранах */
+  }
+}
