@@ -1,0 +1,342 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 30px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Navbar Background */
+.navbar:hover {
+  background-color: #444;
+}
+
+/* Logo Style */
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.logo-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo-link:hover {
+  color: #ff9800; /* Orange color on hover */
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+/* Menu Toggle Button (Mobile View) */
+.menu-toggle {
+  display: none; /* Hidden on larger screens */
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  color: #ff9800;
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #ff9800;
+  color: black;
+}
+
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  gap: 15px;
+  transition: opacity 0.3s ease;
+}
+
+.language-switcher button {
+  background-color: #444;
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.language-switcher button:hover {
+  background-color: #ff9800;
+  transform: translateY(-3px); /* Slight upward movement on hover */
+}
+
+/* Responsive Styles (Mobile View) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show the menu toggle button */
+  }
+
+  .nav-links {
+    display: none; /* Initially hide the links on mobile */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show the links when the menu is active */
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-link {
+    font-size: 20px; /* Increase font size for better readability */
+    padding: 10px;
+  }
+
+  .language-switcher {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .language-switcher button {
+    font-size: 18px;
+    padding: 8px 15px;
+  }
+  .so{
+    margin-left: -30px;
+  }
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 30px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Logo Style */
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.logo-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo-link:hover {
+  color: #ff9800; /* Orange color on hover */
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+/* Menu Toggle Button (Mobile View) */
+.menu-toggle {
+  display: none; /* Hidden on larger screens */
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  color: #ff9800;
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #ff9800;
+  color: black;
+}
+
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  gap: 15px;
+  transition: opacity 0.3s ease;
+}
+
+.language-switcher button {
+  background-color: #444;
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.language-switcher button:hover {
+  background-color: #ff9800;
+  transform: translateY(-3px); /* Slight upward movement on hover */
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: width 0.3s ease, padding 0.3s ease;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.search-button {
+  background-color: #ff9800;
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.search-button:hover {
+  transform: scale(1.1);
+}
+
+.navbar:hover .search-input {
+  width: 200px;
+  opacity: 1;
+  visibility: visible;
+  padding: 8px;
+}
+
+/* Responsive Styles (Mobile View) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show the menu toggle button */
+  }
+
+  .nav-links {
+    display: none; /* Initially hide the links on mobile */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show the links when the menu is active */
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-link {
+    font-size: 20px; /* Increase font size for better readability */
+    padding: 10px;
+  }
+
+  .language-switcher {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .language-switcher button {
+    font-size: 18px;
+    padding: 8px 15px;
+  }
+
+  /* Mobile search */
+  .search-bar {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+  }
+
+  .search-input {
+    width: 150px; /* Fixed width for mobile */
+    opacity: 1;
+    visibility: visible;
+    padding: 5px;
+  }
+}

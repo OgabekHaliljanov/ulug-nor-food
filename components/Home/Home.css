@@ -1,0 +1,246 @@
+/* Основной стиль страницы */
+.home {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  
+  .home-container {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .home-title {
+    font-size: 36px;
+    color: #ff4d4d;
+    margin-bottom: 20px;
+  }
+  
+  .home-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .home-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-button:hover {
+    background-color: #ff9900;
+  }
+  
+  /* Секция рекомендуемых блюд */
+  .featured {
+    margin: 40px 0;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff4d4d;
+    text-align: center;
+  }
+  
+  .featured-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .item p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .order-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .order-button:hover {
+    background-color: #ff9900;
+  }
+  
+  /* Секция акций */
+  .promotions {
+    margin: 40px 0;
+  }
+  
+  .promotion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .promotion img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .promotion-text h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .promotion-text p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  /* Отзывы клиентов */
+  .testimonials {
+    margin: 40px 0;
+    text-align: center;
+  }
+  
+  .testimonial {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: inline-block;
+    max-width: 600px;
+  }
+  
+  .testimonial p {
+    margin-bottom: 10px;
+  }
+  
+  /* Секция подписки */
+  .newsletter {
+    margin: 40px 0;
+    text-align: center;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .newsletter-form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+  }
+  
+  .newsletter-form button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: #ff9900;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .featured-items {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .promotion {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .promotion img {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .featured-items {
+      grid-template-columns: 1fr;
+    }
+  
+    .home-title {
+      font-size: 28px;
+    }
+  
+    .home-description {
+      font-size: 16px;
+    }
+  
+    .home-button {
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+  
+    .promotion img {
+      height: 200px;
+    }
+  
+    .newsletter-form input {
+      width: 100%;
+    }
+  }
+  
